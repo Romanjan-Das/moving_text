@@ -1,0 +1,28 @@
+:root { /*--------imp : there could be only one root element in a document */
+    --moving_text_100: 0px;
+}
+
+.moving_text_container {
+    width: 40vw;
+    /*container width and left must be same*/
+    height: 2.5vw;
+    overflow: hidden;
+}
+
+.moving_text {
+    position: relative;
+    height: inherit;
+    animation: moving_text_animation 10s infinite;
+    animation: moving_text_animation 10s linear 0s infinite normal none;
+}
+
+@keyframes moving_text_animation {
+    0% {
+        left: 40vw;
+    }
+
+    /*container width and left must be same*/
+    100% {
+        left: var(--moving_text_100);
+    }
+}
